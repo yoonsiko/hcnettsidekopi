@@ -9,7 +9,9 @@ class CourseSerializer(serializers.ModelSerializer):
 
 
 class SolutionSerializer(serializers.ModelSerializer):
+    course = CourseSerializer()
+
     class Meta:
         model = Solution
-        fields = ('id', 'name', 'course', 'created_date', 'upload')
+        fields = ('id', 'name', 'course')
 
