@@ -14,4 +14,7 @@ class SolutionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Solution
         fields = ('id', 'name', 'course')
+    class Meta:
+        model = Solution
+        fields = ('id', 'name', 'course', 'created_date', 'upload')
 
